@@ -22,16 +22,40 @@ let products = [
     {id: 21, name: 'Wireless Mouse', price: 12675}
 ];
 
+let carts = [];
 
-products.forEach(element => {
-    const div = document.createElement('div')
-    //div.innerHTML = element.name + ' : Rs: ' + element.price;
-    div.style = "width: 250px; height: 150px; border: solid; float: left; margin: 10px"
+load(0);
 
-    const p = document.createElement('p');
-    p.innerText =  element.name +' : Rs: ' + element.price;
+function load(id){
 
-    div.append(p);
+    let searchResults = products.filter(element => id == 0 || element.id == id);
 
-    document.getElementById("productListDiv").append(div);
-});
+    document.getElementById("productListDiv").innerHTML = '';
+
+    searchResults.forEach(element => {
+        const div = document.createElement('div')
+        //div.innerHTML = element.name + ' : Rs: ' + element.price;
+        div.classList.add("display-card");
+        const p = document.createElement('p');
+        p.innerText =  element.name +' : Rs: ' + element.price;
+
+        div.append(p);
+        div.addEventListener('click', function() {
+            addToCart(element);
+        });
+        document.getElementById("productListDiv").append(div);
+    });
+}
+
+function addToCart(d){
+    carts.push({product: d});
+}
+
+function calculateSum(){
+    total = 0;
+    carts.forEach(cart => {
+        total += cart.product.price;
+    });
+    alert(total);
+}
+

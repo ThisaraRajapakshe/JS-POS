@@ -8,9 +8,11 @@
     
 </head>
 <body>
-    <h1>POS System</h1>
-    id: <input id="productIdInput" />
-    <div id="productListDiv"></div>
+    <header><h1>POS System</h1></header>
+    <Search><input id="productIdInput" placeholder="Enter ID" onchange="load(this.value)" type="number"/></Search>
+    <div id="productDisplayTemplate">
+        <div id="productListDiv"></div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

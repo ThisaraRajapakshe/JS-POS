@@ -1,0 +1,59 @@
+.display-card{
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.25);
+    padding: 38px;  
+    filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center; 
+    text-align: center;
+
+}
+body {
+    /* solid background */
+    background: rgb(0,212,255);
+    
+    /* gradient background*/
+    background: linear-gradient(45deg, rgba(0,212,255,1) 0%, rgba(11,3,45,1) 100%);    
+    
+    /* photo background */
+    /*background-image: url(https://images.unsplash.com/photo-1619204715997-1367fe5812f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1889&q=80);
+    background-size: cover;
+    background-position: center;  
+    
+    /* display: flex;*/
+    align-items: center; 
+    justify-content: center;    
+    height: 100vh;
+  }
+  h1{
+    position: relative;
+    margin-top: auto;
+    font-family: 'Righteous', sans-serif;
+    color: rgba(255,255,255,0.98);
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  p{
+    color: azure;
+    font-size: 24px;
+  }
+
+  #productIdInput{
+    width: 95%;
+    height: 20px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 12px;
+  }
