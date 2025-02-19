@@ -9,9 +9,15 @@
 </head>
 <body>
     <header><h1>POS System</h1></header>
-    <Search><input id="productIdInput" placeholder="Enter ID" onchange="load(this.value)" type="number"/></Search>
+    <input id="productIdInput" placeholder="Enter ID" onchange="load(this.value)" type="number"/>
     <div id="productDisplayTemplate">
         <div id="productListDiv"></div>
+    </div>
+    <div id="displayTotDev">
+        <div id="displayTotTxtBox">
+            <p id="displayTotTxt">Rs. </p>
+        </div>
+        <button type="button" id="displayTotBtn" onclick="calculateSum()">Checkout</button>
     </div>
     <script src="main.js"></script>
 </body>

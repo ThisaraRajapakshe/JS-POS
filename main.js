@@ -22,7 +22,7 @@ let products = [
     {id: 21, name: 'Wireless Mouse', price: 12675}
 ];
 
-let carts = [];
+let cart = [];
 
 load(0);
 
@@ -34,11 +34,9 @@ function load(id){
 
     searchResults.forEach(element => {
         const div = document.createElement('div')
-        //div.innerHTML = element.name + ' : Rs: ' + element.price;
         div.classList.add("display-card");
         const p = document.createElement('p');
         p.innerText =  element.name +' : Rs: ' + element.price;
-
         div.append(p);
         div.addEventListener('click', function() {
             addToCart(element);
@@ -47,15 +45,17 @@ function load(id){
     });
 }
 
-function addToCart(d){
-    carts.push({product: d});
+function addToCart(product){
+    cart.push({product: product});
 }
 
 function calculateSum(){
+ 
     total = 0;
-    carts.forEach(cart => {
+    cart.forEach(cart => {
         total += cart.product.price;
     });
-    alert(total);
+    //alert(total);
+    document.getElementById('displayTotTxt').innerHTML = "Rs."+total;
 }
 

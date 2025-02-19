@@ -57,3 +57,43 @@ body {
     margin-right: auto;
     padding: 12px;
   }
+  #displayTotDev{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(15deg, rgba(0,212,255,1) 0%, rgba(11,3,45,1) 100%);
+  }
+
+  #displayTotBtn{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    font-size: large;
+    border-radius: 15px;
+    position: absolute;
+    right: 430px;
+    top: 5px;
+    color: black;
+    font-weight: bold;    
+}
+#displayTotTxtBox{
+    border: solid;
+    width: 400px;
+    height: 44px;
+    text-align: left;
+    font-size: medium;
+    border-radius: 15px;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    color: black;
+    background-color: white;
+    font-weight: bold;
+}
+#displayTotTxt{
+    color:black;
+    padding: 5px;
+    margin: 5px;
+   
+}
