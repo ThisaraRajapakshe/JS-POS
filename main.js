@@ -1,5 +1,5 @@
-let products = [
-    {id: 1, name: 'Smartphone', price: 97175},
+let product = [
+    {id: 1, name: 'Smartphone', price: 100000},
     {id: 2, name: 'Laptop', price: 292175},
     {id: 3, name: 'Tablet', price: 64675},
     {id: 4, name: 'Smartwatch', price: 48425},
@@ -21,14 +21,14 @@ let products = [
     {id: 20, name: 'Wireless Keyboard', price: 25675},
     {id: 21, name: 'Wireless Mouse', price: 12675}
 ];
-
+let amount = 1;
+let subTot;
 let cart = [];
-
 load(0);
 
 function load(id){
 
-    let searchResults = products.filter(element => id == 0 || element.id == id);
+    let searchResults = product.filter(element => id == 0 || element.id == id);
 
     document.getElementById("productListDiv").innerHTML = '';
 
@@ -44,18 +44,21 @@ function load(id){
         document.getElementById("productListDiv").append(div);
     });
 }
-
+function amountOnChange(newAmount){
+    amount = Number(newAmount);
+}
 function addToCart(product){
+    debugger
     cart.push({product: product});
+    subTot = product.price * amount; 
+    console.log(subTot);
 }
 
 function calculateSum(){
- 
     total = 0;
     cart.forEach(cart => {
         total += cart.product.price;
     });
-    //alert(total);
     document.getElementById('displayTotTxt').innerHTML = "Rs."+total;
 }
 

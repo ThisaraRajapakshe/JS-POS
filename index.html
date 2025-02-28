@@ -10,6 +10,8 @@
 <body>
     <header><h1>POS System</h1></header>
     <input id="productIdInput" placeholder="Enter ID" onchange="load(this.value)" type="number"/>
+    <label for="amountTxt">Enter Amount</label>
+    <input type="number" name="amountTxt" id="amountTxt" placeholder="Enter Amount" value="1" onchange="amountOnChange(this.value)"/>
     <div id="productDisplayTemplate">
         <div id="productListDiv"></div>
     </div>
