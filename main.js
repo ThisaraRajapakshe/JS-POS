@@ -48,16 +48,17 @@ function amountOnChange(newAmount){
     amount = Number(newAmount);
 }
 function addToCart(product){
-    debugger
+    subTot = product.price * amount;
+    product.subTotal = subTot;
     cart.push({product: product});
-    subTot = product.price * amount; 
     console.log(subTot);
+    console.log(product);
 }
 
 function calculateSum(){
     total = 0;
     cart.forEach(cart => {
-        total += cart.product.price;
+        total += cart.product.subTotal;
     });
     document.getElementById('displayTotTxt').innerHTML = "Rs."+total;
 }
